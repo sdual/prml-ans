@@ -5,9 +5,10 @@ The error function is given by
  \tilde{E}(\bf{w}) = \frac{1}{2} \sum_{n=1}^N
   \left \{
    y(x_n, \bf{w}) - t_n
-  \right \}^2 + \frac{1}{2} \| \bf{w} \|^2 .
+  \right \}^2 + \frac{1}{2} \| \bf{w} \|^2 \ .
 \end{eqnarray}
 
+We obtain he derivative with respect to $w_i$ from following calculation.
 \begin{eqnarray}
  \frac{\partial \tilde{E}(\bf{w})}{\partial w_l}
  &=&
@@ -17,8 +18,15 @@ The error function is given by
    \right \} \delta_{lk} x^k + w_l \\
  &=&
   = \sum_{n=1}^N
-  \left \{
+  \left [
    \sum_{j=0}^M w_j x^j x_n^l
-          \right \}
-          - \sum_{n=1}^N t_n x^l + w_l
+          \right ]
+          - \sum_{n=1}^N t_n x^l + w_l \ .
+\end{eqnarray}
+
+\begin{eqnarray}
+ \sum_{n=1}^N
+  \left [
+   \sum_{j=0}^M w_j x^j x_n^l
+\right ] - \sum_{n=1}^N
 \end{eqnarray}
