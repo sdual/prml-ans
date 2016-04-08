@@ -2,13 +2,13 @@
 1.2 \\
 The error function is given by
 \begin{eqnarray}
- \tilde{E}(\bf{w}) = \frac{1}{2} \sum_{n=1}^N
+ \tilde{E}({\bf w}) = \frac{1}{2} \sum_{n=1}^N
   \left \{
-   y(x_n, \bf{w}) - t_n
-  \right \}^2 + \frac{1}{2} \| \bf{w} \|^2 \ .
+   y(x_n, {\bf w}) - t_n
+  \right \}^2 + \frac{1}{2} \| {\bf w} \|^2 \ .
 \end{eqnarray}
 
-We obtain he derivative with respect to $w_i$ from following calculation.
+We obtain the derivative with respect to $w_i$ from following calculation.
 \begin{eqnarray}
  \frac{\partial \tilde{E}(\bf{w})}{\partial w_l}
  &=&
@@ -17,7 +17,7 @@ We obtain he derivative with respect to $w_i$ from following calculation.
    w_j x_n^j - t_n
    \right \} \delta_{lk} x^k + w_l \\
  &=&
-  = \sum_{n=1}^N
+ \sum_{n=1}^N
   \left [
    \sum_{j=0}^M w_j x^j x_n^l
           \right ]
@@ -28,5 +28,8 @@ We obtain he derivative with respect to $w_i$ from following calculation.
  \sum_{n=1}^N
   \left [
    \sum_{j=0}^M w_j x^j x_n^l
-\right ] - \sum_{n=1}^N
+\right ]
+- \sum_{n=1}^N t_n x^l
++ w_l = 0 \ , \\
+\sum_{j=0}^M A_{lj} w_j = T_l - w_l \ .
 \end{eqnarray}
